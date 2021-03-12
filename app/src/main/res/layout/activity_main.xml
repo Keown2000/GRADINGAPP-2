@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GradingActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:fitsSystemWindows="true"
+            app:elevation="0dip"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@color/design_default_color_surface" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBarLayout"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/gradingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:autofillHints=""
+                    android:hint="@string/hint_gradingTitle"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:background="@color/purple_200"/>
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:hint="@string/hint_gradingDescription"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="2"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:background="@color/purple_200"/>
+
+
+
+                <EditText
+                    android:id="@+id/Other"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="8dp"
+                    android:hint="@string/hint_gradingOther"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:background="@color/purple_200"/>
+
+                <EditText
+                    android:id="@+id/Grade"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.888"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.781"
+                    android:autofillHints="Please Enter an Amount"
+                    android:textColor="@color/black"
+                    android:hint="Grade"
+                    android:background="@color/purple_200"/>
+
+
+                <ImageView
+                    android:id="@+id/gradingImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_baseline_image_search_24"/>
+
+
+                <Button
+                    android:id="@+id/chooseImage"
+                    android:layout_width="389dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@color/design_default_color_background"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="25dp"
+                    android:text="@string/button_addImage"
+                    android:textColor="@color/design_default_color_surface"
+                    android:textSize="16sp"
+                    />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="125dp"
+                    android:background="@color/white"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/button_addGrading"
+                    android:textColor="@color/design_default_color_surface"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btm_nav"
+            android:layout_alignParentBottom="true"
+            android:background="@color/purple_200"
+            app:menu="@menu/bottom_nav"
+
+            />
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btm_nav"
+            android:layout_marginBottom="-56dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
